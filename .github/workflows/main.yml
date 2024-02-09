@@ -1,0 +1,12 @@
+on: [push]
+
+jobs:
+  generate_vex:
+    runs-on: ubuntu-latest
+    name: Test VEX Generation
+    steps:
+      - id: foo
+        uses: szh/generate-vex-action@main
+        with:
+          deployment-file: "https://k8s.io/examples/application/deployment.yaml"
+          ready-condition: "kubectl wait --for=condition=ready pod -l app=nginx --timeout=300s"
