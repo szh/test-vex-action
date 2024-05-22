@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: conjur-cli
+  namespace: conjur-oss
+  labels:
+    app: conjur-cli
+spec:
+  containers:
+  - name: conjur-cli
+    image: cyberark/conjur-cli:8
+    command: ["sleep"]
+    args: ["infinity"]
+    resources:
+      limits:
+        cpu: "1"
+        memory: "1Gi"
