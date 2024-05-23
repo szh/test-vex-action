@@ -29,6 +29,6 @@ jobs:
         uses: szh/generate-vex-action@main
         with:
           helm-chart-path: "conjur-oss-helm-chart/conjur-oss"
-          install-timeout: 600s
+          install-timeout: 120s
           namespace: "conjur-oss"
           test-command: code/test.sh

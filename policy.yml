@@ -1,0 +1,17 @@
+- !group
+  id: test-users
+
+- !host
+  id: test-app
+
+- !grant
+  role: !group test-users
+  member: !host test-app
+
+- !variable
+  id: test/secret
+
+- !permit
+  role: !group test-users
+  privilege: [ read, execute ]
+  resource: !variable test/secret
