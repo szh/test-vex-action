@@ -72,6 +72,3 @@ kubectl exec -n conjur-oss \
 kubectl exec -n conjur-oss \
     "$cli_pod" \
     -- bash -c "conjur variable get -i test/secret"
-
-# Wait for VEX docs to be generated for all containers
-sleep 60
